@@ -1,0 +1,28 @@
+{
+    "name": "tharindu-wj/product-list",
+    "type": "project",
+    "license": "MIT",
+    "description": "Products with categories",
+    "authors": [
+        {
+            "name": "Tharindu Wickramasinghe",
+            "email": "tharinduw@eight25media.com",
+            "homepage": "https://github.com/tharindu-wj/product-list"
+        }
+    ],
+    "keywords": [
+        "php","mvc"
+    ],
+    "support": {
+        "issues": "https://github.com/tharindu-wj/product-list"
+    },
+    "require": {
+        "php": ">=5.6",
+        "tharindu-wj/mvc-base": "dev-master"
+    },
+    "autoload": {
+        "classmap": [
+            "controllers"
+        ]
+    }
+}
