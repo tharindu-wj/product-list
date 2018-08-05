@@ -17,4 +17,11 @@ class Products extends Controller{
         $viewmodel = new ProductModel();
         $this->returnView($viewmodel->add(), true);
     }
+
+    public function delete()
+    {
+        var_dump($_GET);
+        $prod_id = $_GET['prod_id'];
+        echo $prod_id;
+    }
 }

@@ -22,8 +22,8 @@
             <?php foreach ($viewmodel as $category) : ?>
             <tr>
                 <th scope="row"><?php echo $category['category_id']; ?></th>
-                <td><?php echo $category['name']; ?></td>
-                <td><?php echo $category['description']; ?></td>
+                <td><?php echo $category['cat_name']; ?></td>
+                <td><?php echo $category['cat_description']; ?></td>
                 <td><a href="#">View Products</a> </td>
             </tr>
             <?php endforeach; ?>

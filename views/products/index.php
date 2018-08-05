@@ -18,17 +18,21 @@
                 <th>Price</th>
                 <th>Image</th>
                 <th>Category</th>
+                <th>Category</th>
             </tr>
             </thead>
             <tbody>
             <?php foreach ($viewmodel as $product) : ?>
                 <tr>
                     <th scope="row"><?php echo $product['product_id']; ?></th>
-                    <td><?php echo $product['name']; ?></td>
-                    <td><?php echo $product['description']; ?></td>
-                    <td><?php echo $product['price']; ?></td>
-                    <td><img src="uploads/<?php echo $product['image']; ?>" height="60" width="60"></td>
-                    <td><?php echo $product['category_id']; ?></td>
+                    <td><?php echo $product['prod_name']; ?></td>
+                    <td><?php echo $product['prod_description']; ?></td>
+                    <td><?php echo $product['prod_price']; ?></td>
+                    <td><img src="uploads/<?php echo $product['prod_image']; ?>" height="60" width="60"></td>
+                    <td><?php echo $product['cat_name']; ?></td>
+                    <td>
+                        <a href="#">Update</a>
+                        <a href="<?php echo ROOT_URL;?>products/delete?id=<?php echo $product['product_id']; ?>">Delete</a></td>
                 </tr>
             <?php endforeach; ?>
             </tbody>

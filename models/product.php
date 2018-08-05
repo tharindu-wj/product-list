@@ -10,7 +10,7 @@ class ProductModel extends Model
 {
     public function Index()
     {
-        $this->query('SELECT * FROM products ORDER BY name ASC');
+        $this->query('SELECT * FROM products INNER JOIN categories ON products.category_id = categories.category_id;');
         $rows = $this->resultSet();
         return $rows;
     }
@@ -49,7 +49,7 @@ class ProductModel extends Model
             }
 
             // Insert into MySql
-            $this->query('INSERT INTO products (name, description, price, image, category_id) VALUES (:name, :description, :price, :image, :category_id)');
+            $this->query('INSERT INTO products (prod_name, prod_description, prod_price, image, category_id) VALUES (:name, :description, :price, :image, :category_id)');
 
             $this->bind(':name', $post['name']);
             $this->bind(':description', $post['description']);
@@ -66,4 +66,5 @@ class ProductModel extends Model
             }
         }
     }
+
 }

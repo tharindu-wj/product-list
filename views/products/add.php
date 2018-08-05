@@ -22,7 +22,7 @@
             </div>
             <div class="form-group">
                 <label>Product Price</label>
-                <input type="text" name="price" class="form-control"/>
+                <input type="number" name="price" class="form-control"/>
             </div>
             <div class="form-group">
                 <label>Product Image</label>
@@ -31,7 +31,7 @@
             <div class="form-group">
                 <label>Category</label>
                 <select name="category" class="form-control">
-                    <option value="1">One</option>
+                    <option value="2">One</option>
                 </select>
             </div>
             <input class="btn btn-success" type="submit" name="submit" value="Submit">
