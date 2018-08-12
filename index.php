@@ -19,10 +19,13 @@ require 'classes/Model.php';
 require 'models/home.php';
 require 'models/category.php';
 require 'models/product.php';
+require 'models/user.php';
+
 
 require 'controllers/home.php';
 require 'controllers/categories.php';
 require 'controllers/products.php';
+require 'controllers/users.php';
 
 //require 'vendor/autoload.php';
 //
