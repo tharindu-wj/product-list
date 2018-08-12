@@ -5,7 +5,9 @@
  * Date: 7/1/18
  * Time: 5:45 PM
  */
+//var_dump($viewmodel);
 ?>
+
 <div class="panel panel-default">
     <div class="panel-heading">
         <h3 class="panel-title">Share Something</h3>
@@ -31,7 +33,9 @@
             <div class="form-group">
                 <label>Category</label>
                 <select name="category" class="form-control">
-                    <option value="2">One</option>
+                    <?php foreach ($viewmodel as $category) : ?>
+                    <option value="<?php echo $category['category_id'] ?>"><?php echo $category['cat_name'] ?></option>
+                    <?php endforeach; ?>
                 </select>
             </div>
             <input class="btn btn-success" type="submit" name="submit" value="Submit">

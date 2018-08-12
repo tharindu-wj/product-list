@@ -66,6 +66,10 @@ class ProductModel extends Model
                 echo "Record added";
             }
         }
-    }
 
+        //get categories for dropdown
+        $this->query('SELECT * FROM categories ORDER BY cat_name ASC');
+        $cat_rows = $this->resultSet();
+        return $cat_rows;
+    }
 }

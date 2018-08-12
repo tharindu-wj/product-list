@@ -14,4 +14,10 @@ class Categories extends Controller
         $viewmodel = new CategoryModel();
         $this->returnView($viewmodel->Index(), true);
     }
+
+    protected function add()
+    {
+        $viewmodel = new CategoryModel();
+        $this->returnView($viewmodel->add(), true);
+    }
 }
