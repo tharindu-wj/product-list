@@ -5,7 +5,7 @@
  * Date: 7/1/18
  * Time: 5:45 PM
  */
-var_dump($viewmodel);
+//var_dump($viewmodel);
 ?>
 <div class="panel panel-default">
     <div class="panel-heading">

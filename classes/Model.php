@@ -68,4 +68,10 @@ abstract class Model
     {
         return $this->dbh->lastInsertId();
     }
+
+    //Check input is successfully done
+    public function rowCount()
+    {
+        return  $this->stmt->rowCount();
+    }
 }

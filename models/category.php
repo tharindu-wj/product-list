@@ -55,7 +55,7 @@ class CategoryModel extends Model
 
         // Sanitize POST
         $post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
-        var_dump($post);
+        //var_dump($post);
         if ($post['submit']) {
             // Insert into MySql
             $this->query('UPDATE categories SET 

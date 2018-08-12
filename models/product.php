@@ -138,10 +138,10 @@ prod_name = :name, prod_description = :description, prod_price = :price, categor
 
             $this->execute();
 
-            //Verify
-            if ($this->lastInsertId()) {
+            $status = $this->rowCount();
+            if ($status) {
                 header('location: ' . ROOT_URL . 'products');
-                echo "Record added";
+                Messages::setMsg("Success", 'successMsg');
             }
         }
 
