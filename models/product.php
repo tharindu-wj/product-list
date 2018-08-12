@@ -20,7 +20,7 @@ class ProductModel extends Model
         // Sanitize POST
         $post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
         //var_dump($_FILES);
-        //var_dump($post);
+        var_dump($post);
 
         if ($post['submit']) {
 
@@ -49,7 +49,7 @@ class ProductModel extends Model
             }
 
             // Insert into MySql
-            $this->query('INSERT INTO products (prod_name, prod_description, prod_price, image, category_id) VALUES (:name, :description, :price, :image, :category_id)');
+            $this->query('INSERT INTO products (prod_name, prod_description, prod_price, 	prod_image, category_id) VALUES (:name, :description, :price, :image, :category_id)');
 
             $this->bind(':name', $post['name']);
             $this->bind(':description', $post['description']);
@@ -62,7 +62,7 @@ class ProductModel extends Model
             //Verify
             if ($this->lastInsertId()) {
                 header('location: ' . ROOT_URL. 'products');
-                //echo "Record added";
+                echo "Record added";
             }
         }
     }
