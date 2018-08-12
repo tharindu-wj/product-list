@@ -6,7 +6,8 @@
  * Time: 4:41 PM
  */
 
-abstract class Controller{
+abstract class Controller
+{
     protected $request;
     protected $action;
 
@@ -17,19 +18,20 @@ abstract class Controller{
     }
 
 
-    public function executeAction(){
+    public function executeAction()
+    {
         return $this->{$this->action}();
     }
 
 
-    protected function returnView($viewmodel, $fullview){
+    protected function returnView($viewmodel, $fullview)
+    {
         $class_name = strtolower(get_class($this));
-        $view = 'views/'. $class_name. '/' . $this->action. '.php';
+        $view = 'views/' . $class_name . '/' . $this->action . '.php';
 
-        if($fullview){
+        if ($fullview) {
             require('views/main.php');
-        }
-        else{
+        } else {
             require($view);
         }
     }

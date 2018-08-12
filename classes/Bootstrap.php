@@ -6,7 +6,8 @@
  * Time: 5:13 PM
  */
 
-class Bootstrap{
+class Bootstrap
+{
     private $controller;
     private $action;
     private $request;
@@ -15,46 +16,41 @@ class Bootstrap{
     {
         $this->request = $request;
 
-        if($this->request['controller'] == ""){
+        if ($this->request['controller'] == "") {
             $this->controller = 'home';
-        }
-        else{
+        } else {
             $this->controller = $this->request['controller'];
         }
 
-        if($this->request['action'] == ""){
+        if ($this->request['action'] == "") {
             $this->action = 'index';
-        }
-        else{
+        } else {
             $this->action = $this->request['action'];
         }
         //echo $this->controller;
     }
 
 
-    public function createController(){
+    public function createController()
+    {
         //Check Class
-        if(class_exists($this->controller)){
+        if (class_exists($this->controller)) {
             $parents = class_parents($this->controller);
             //Check Extend
-            if(in_array("Controller", $parents)){
-
-                if(method_exists($this->controller, $this->action)){
+            if (in_array("Controller", $parents)) {
+                if (method_exists($this->controller, $this->action)) {
                     return new $this->controller($this->action, $this->request);
-                }
-                else{
+                } else {
                     //Method Does Not Exist
                     echo '<h1>Method does not exist</h1>';
                     return;
                 }
-            }
-            else{
+            } else {
                 //Base Controller Does Not Exists
                 echo '<h1>Base controller not found</h1>';
                 return;
             }
-        }
-        else{
+        } else {
             //Base Controller Does Not Exists
             echo '<h1>Controller class does not exist</h1>';
             return;

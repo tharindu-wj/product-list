@@ -38,4 +38,11 @@ class CategoryModel extends Model
             }
         }
     }
+
+    public function delete($id)
+    {
+        $this->query('DELETE FROM categories WHERE category_id = :cat_id');
+        $this->bind(':cat_id', $id);
+        $this->execute();
+    }
 }

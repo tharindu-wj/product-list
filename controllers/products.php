@@ -23,8 +23,10 @@ class Products extends Controller
 
     public function delete()
     {
-        var_dump($_GET);
-        $prod_id = $_GET['prod_id'];
-        echo $prod_id;
+        //var_dump($_GET);
+        $prod_id = $_GET['id'];
+
+        $viewmodel = new ProductModel();
+        $viewmodel->delete($prod_id);
     }
 }

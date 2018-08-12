@@ -72,4 +72,11 @@ class ProductModel extends Model
         $cat_rows = $this->resultSet();
         return $cat_rows;
     }
+
+    public function delete($id)
+    {
+        $this->query('DELETE FROM products WHERE product_id = :prod_id');
+        $this->bind(':prod_id', $id);
+        $this->execute();
+    }
 }

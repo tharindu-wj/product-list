@@ -25,6 +25,11 @@
                 <td><?php echo $category['cat_name']; ?></td>
                 <td><?php echo $category['cat_description']; ?></td>
                 <td><a href="#">View Products</a> </td>
+                <td>
+                    <a href="#">Update</a>
+                    <a href="<?php echo ROOT_URL;?>categories/delete?id=<?php echo $category['category_id']; ?>">
+                        Delete
+                    </a></td>
             </tr>
             <?php endforeach; ?>
             </tbody>

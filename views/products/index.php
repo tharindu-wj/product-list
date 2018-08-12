@@ -32,7 +32,9 @@
                     <td><?php echo $product['cat_name']; ?></td>
                     <td>
                         <a href="#">Update</a>
-                        <a href="<?php echo ROOT_URL;?>products/delete?id=<?php echo $product['product_id']; ?>">Delete</a></td>
+                        <a href="<?php echo ROOT_URL;?>products/delete?id=<?php echo $product['product_id']; ?>">
+                            Delete
+                        </a></td>
                 </tr>
             <?php endforeach; ?>
             </tbody>
