@@ -7,8 +7,10 @@
  */
 
 
-class Categories extends Controller{
-    protected function Index(){
+class Categories extends Controller
+{
+    protected function index()
+    {
         $viewmodel = new CategoryModel();
         $this->returnView($viewmodel->Index(), true);
     }

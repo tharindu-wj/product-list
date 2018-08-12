@@ -7,13 +7,16 @@
  */
 
 
-class Products extends Controller{
-    protected function Index(){
+class Products extends Controller
+{
+    protected function index()
+    {
         $viewmodel = new ProductModel();
         $this->returnView($viewmodel->Index(), true);
     }
 
-    public function add(){
+    public function add()
+    {
         $viewmodel = new ProductModel();
         $this->returnView($viewmodel->add(), true);
     }

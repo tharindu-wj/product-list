@@ -6,9 +6,10 @@
  * Date: 7/1/18
  * Time: 4:28 PM
  */
+
 class ProductModel extends Model
 {
-    public function Index()
+    public function index()
     {
         $this->query('SELECT * FROM products INNER JOIN categories ON products.category_id = categories.category_id;');
         $rows = $this->resultSet();
@@ -23,7 +24,6 @@ class ProductModel extends Model
         var_dump($post);
 
         if ($post['submit']) {
-
             //Upload image to uploads
             if (isset($_FILES['image'])) {
                 $errors = array();
@@ -49,7 +49,8 @@ class ProductModel extends Model
             }
 
             // Insert into MySql
-            $this->query('INSERT INTO products (prod_name, prod_description, prod_price, 	prod_image, category_id) VALUES (:name, :description, :price, :image, :category_id)');
+            $this->query('INSERT INTO products (prod_name, prod_description, prod_price, 	prod_image, category_id)
+ VALUES (:name, :description, :price, :image, :category_id)');
 
             $this->bind(':name', $post['name']);
             $this->bind(':description', $post['description']);
@@ -61,7 +62,7 @@ class ProductModel extends Model
 
             //Verify
             if ($this->lastInsertId()) {
-                header('location: ' . ROOT_URL. 'products');
+                header('location: ' . ROOT_URL . 'products');
                 echo "Record added";
             }
         }
