@@ -29,4 +29,11 @@ class Categories extends Controller
         $viewmodel = new CategoryModel();
         $viewmodel->delete($cat_id);
     }
+
+    protected function update()
+    {
+        $cat_id = $_GET['id'];
+        $viewmodel = new CategoryModel();
+        $this->returnView($viewmodel->update($cat_id), true);
+    }
 }
