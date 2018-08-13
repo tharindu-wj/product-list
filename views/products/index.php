@@ -31,8 +31,12 @@
                     <td><img src="uploads/<?php echo $product['prod_image']; ?>" height="60" width="60"></td>
                     <td><?php echo $product['cat_name']; ?></td>
                     <td>
-                        <a href="#">Update</a>
-                        <a href="<?php echo ROOT_URL;?>products/delete?id=<?php echo $product['product_id']; ?>">Delete</a></td>
+                        <a href="<?php echo ROOT_URL;?>products/update?id=<?php echo $product['product_id']; ?>">
+                            Update
+                        </a>
+                        <a href="<?php echo ROOT_URL;?>products/delete?id=<?php echo $product['product_id']; ?>">
+                            Delete
+                        </a></td>
                 </tr>
             <?php endforeach; ?>
             </tbody>

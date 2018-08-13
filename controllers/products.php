@@ -7,21 +7,35 @@
  */
 
 
-class Products extends Controller{
-    protected function Index(){
+class Products extends Controller
+{
+    protected function index()
+    {
         $viewmodel = new ProductModel();
         $this->returnView($viewmodel->Index(), true);
     }
 
-    public function add(){
+    public function add()
+    {
         $viewmodel = new ProductModel();
         $this->returnView($viewmodel->add(), true);
     }
 
     public function delete()
     {
-        var_dump($_GET);
-        $prod_id = $_GET['prod_id'];
-        echo $prod_id;
+        //var_dump($_GET);
+        $prod_id = $_GET['id'];
+
+        $viewmodel = new ProductModel();
+        $viewmodel->delete($prod_id);
+    }
+
+    public function update()
+    {
+        //var_dump($_GET);
+        $prod_id = $_GET['id'];
+
+        $viewmodel = new ProductModel();
+        $this->returnView($viewmodel->update($prod_id), true);
     }
 }

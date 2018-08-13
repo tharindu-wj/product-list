@@ -11,7 +11,9 @@
 <nav class="navbar navbar-inverse ">
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -25,7 +27,7 @@
                 <li><a href="<?php echo ROOT_URL; ?>categories">Categories</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <?php if(isset($_SESSION['is_logged_in'])) : ?>
+                <?php if (isset($_SESSION['is_logged_in'])) : ?>
                     <li><a>Welcome <?php echo $_SESSION['user_data']['name']; ?></a></li>
                     <li><a href="<?php echo ROOT_URL; ?>users/logout">Logout</a></li>
                 <?php else : ?>

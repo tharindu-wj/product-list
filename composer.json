@@ -22,7 +22,7 @@
     },
     "autoload": {
         "classmap": [
-            "controllers"
+
         ]
     }
 }
