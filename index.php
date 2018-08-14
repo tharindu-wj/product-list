@@ -11,34 +11,32 @@ session_start();
 
 require 'config.php';
 
+require 'vendor/autoload.php';
+
+use MvcBase\Bootstrap;
+
+/*
 require 'classes/Messages.php';
 require 'classes/Bootstrap.php';
 require 'classes/Controller.php';
 require 'classes/Model.php';
 
-require 'models/home.php';
-require 'models/category.php';
-require 'models/product.php';
-require 'models/user.php';
+require 'src/models/home.php';
+require 'src/models/category.php';
+require 'src/models/product.php';
+require 'src/models/user.php';
 
 
-require 'controllers/home.php';
-require 'controllers/categories.php';
-require 'controllers/products.php';
-require 'controllers/users.php';
-
-//require 'vendor/autoload.php';
-//
-//use MvcBase\Messages;
-//use MvcBase\Bootstrap;
-//use MvcBase\Controller;
-//use MvcBase\Model;
-
+require 'src/controllers/home.php';
+require 'src/controllers/categories.php';
+require 'src/controllers/products.php';
+require 'src/controllers/users.php';
+*/
 
 $bootstrap = new Bootstrap($_GET);
 
 $controller = $bootstrap->createController();
 
-if($controller){
+if ($controller) {
     $controller->executeAction();
 }

@@ -27,10 +27,10 @@ abstract class Controller
     protected function returnView($viewmodel, $fullview)
     {
         $class_name = strtolower(get_class($this));
-        $view = 'views/' . $class_name . '/' . $this->action . '.php';
+        $view = 'src/views/' . $class_name . '/' . $this->action . '.php';
 
         if ($fullview) {
-            require('views/main.php');
+            require('src/views/main.php');
         } else {
             require($view);
         }
