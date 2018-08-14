@@ -8,7 +8,7 @@
 
 //Define DB Params
 define("DB_HOST", "localhost");
-define("DB_USER", "root");
+define("DB_USER", "tharindu");
 define("DB_PASS", "asdf1234");
 define("DB_NAME", "product_list");
 
