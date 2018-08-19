@@ -6,6 +6,10 @@
  * Time: 11:12 AM
  */
 
+namespace App\Models;
+
+use MvcBase\Model;
+
 class UserModel extends Model
 {
     public function register()

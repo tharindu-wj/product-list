@@ -6,6 +6,10 @@
  * Time: 11:09 AM
  */
 
+namespace App\Contollers;
+
+use MvcBase\Controller;
+
 class users extends Controller
 {
     protected function register()

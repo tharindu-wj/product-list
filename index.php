@@ -14,6 +14,9 @@ require 'config.php';
 require 'vendor/autoload.php';
 
 use MvcBase\Bootstrap;
+use MvcBase\Controller;
+
+use App\Contollers\Home;
 
 /*
 require 'classes/Messages.php';

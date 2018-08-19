@@ -6,6 +6,9 @@
  * Time: 4:54 PM
  */
 
+namespace App\Contollers;
+
+use MvcBase\Controller;
 
 class Products extends Controller
 {

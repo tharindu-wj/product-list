@@ -7,6 +7,10 @@
  * Time: 4:28 PM
  */
 
+namespace App\Models;
+
+use MvcBase\Model;
+
 class HomeModel extends Model
 {
     public function index()

@@ -7,6 +7,10 @@
  * Time: 4:28 PM
  */
 
+namespace App\Models;
+
+use MvcBase\Model;
+
 class CategoryModel extends Model
 {
     public function index()
